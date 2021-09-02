@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>GR Home</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 <header>
@@ -24,6 +25,9 @@
             <p>Описание: <p th:text="${product.getDescription()}"></p></p>
             <p>Рейтинг: <span th:text="${product.getRaiting()}"></span></p>
             <p>Количество на складе: <span th:text="${product.getCount()}"></span></p>
+            <div th:if="${product.filename}">
+                <img th:src="@{/img/{path} (path = ${product.getFilename()})}">
+            </div>
             <hr>
         </div>
     </div>

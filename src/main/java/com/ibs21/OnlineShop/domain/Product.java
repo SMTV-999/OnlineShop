@@ -18,6 +18,7 @@ public class Product {
     private int raiting; //рейтинг
     private Integer price; //цена
     private int count; //количество
+    private String filename; //фото
 
 
     public Long getId() {
@@ -74,5 +75,13 @@ public class Product {
 
     public void setSeller(User seller) {
         this.seller = seller;
+    }
+
+    public String getFilename() {
+        return filename;
+    }
+
+    public void setFilename(String filename) {
+        this.filename = filename;
     }
 }
