@@ -5,6 +5,7 @@ import com.ibs21.OnlineShop.domain.User;
 import com.ibs21.OnlineShop.repos.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,7 +29,6 @@ public class ProductsController {
     @GetMapping("/{id}")
     public String product(@PathVariable("id") Long id, Model model) {
         model.addAttribute("product", productRepository.findById(id));
-        //model.addAttribute("likely"); - похожие
         return "products/product";
     }
 

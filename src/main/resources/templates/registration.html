@@ -17,7 +17,12 @@
 <form th:action="@{/registration}" method="post">
   <div><label> User Name : <input type="text" name="username"/> </label></div>
   <div><label> Password: <input type="password" name="password"/> </label></div>
+  <div><label> email: <input type="email" name="email"/> </label></div>
   <div><input type="submit" value="Зарегистрировать"/></div>
+  <input type="checkbox" id="role" name="role"
+         checked>
+  <label for="role">Я продавец</label>
+  </div>
 </form>
 </body>
 </html>
